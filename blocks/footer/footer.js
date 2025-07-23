@@ -1,4 +1,3 @@
-import { getRootPath, isMultistore } from '@dropins/tools/lib/aem/configs.js';
 // Dropin Components
 import {
   Button,
@@ -9,6 +8,7 @@ import {
 import createModal from '../modal/modal.js';
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import { getRootPath, isMultistore } from '../../scripts/configs.js';
 
 /**
  * Toggles all storeSelector sections

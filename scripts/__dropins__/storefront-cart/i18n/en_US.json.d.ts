@@ -6,15 +6,6 @@ declare const _default: {
       "viewAll": "View all in cart",
       "viewMore": "View more"
     },
-    "CartSummaryTable": {
-      "item": "Item",
-      "price": "Price",
-      "qty": "Qty",
-      "subtotal": "Subtotal",
-      "mobilePrice": "Price",
-      "mobileQty": "Qty",
-      "mobileSubtotal": "Subtotal"
-    },
     "MiniCart": {
       "heading": "Shopping Cart ({count})",
       "subtotal": "Subtotal",
@@ -132,9 +123,7 @@ declare const _default: {
       "insufficientQuantityGeneral": "Not enough items for sale",
       "notAvailableMessage": "Requested qty. not available",
       "discountPercentage": "{discount}% off",
-      "savingsAmount": "Savings",
-      "includingTax": "Incl. tax",
-      "excludingTax": "Excl. tax"
+      "savingsAmount": "Savings"
     },
     "EstimateShipping": {
       "label": "Shipping",
@@ -192,8 +181,8 @@ declare const _default: {
           "formTo": "To",
           "formFrom": "From",
           "giftMessageTitle": "Gift message",
-          "formToPlaceholder": "Recipient's name",
-          "formFromPlaceholder": "Sender's name",
+          "formToPlaceholder": "Recipient’s name",
+          "formFromPlaceholder": "Sender’s name",
           "formMessagePlaceholder": "Gift message"
         },
         "readOnlyFormView": {
@@ -230,8 +219,8 @@ declare const _default: {
           "formTo": "To",
           "formFrom": "From",
           "giftMessageTitle": "Gift message",
-          "formToPlaceholder": "Recipient's name",
-          "formFromPlaceholder": "Sender's name",
+          "formToPlaceholder": "Recipient’s name",
+          "formFromPlaceholder": "Sender’s name",
           "formMessagePlaceholder": "Gift message"
         },
         "readOnlyFormView": {

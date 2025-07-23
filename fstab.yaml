@@ -1,0 +1,7 @@
+mountpoints:
+  /:
+    url: https://content.da.live/vk-adobe/aco-demo/
+    type: markup
+
+folders:
+  /products/: /products/default

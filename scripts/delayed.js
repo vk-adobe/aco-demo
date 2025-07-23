@@ -1,32 +1,35 @@
-import { getConfigValue } from '@dropins/tools/lib/aem/configs.js';
+/* eslint-disable import/no-cycle */
+import { getConfigValue } from './configs.js';
 import { getUserTokenCookie } from './initializers/index.js';
-import { getConsent } from './commerce.js';
+import { getConsent } from './scripts.js';
 
 async function initAnalytics() {
   try {
     // Load Commerce events SDK and collector
     // only if "analytics" has been added to the config.
-    const analyticsConfig = getConfigValue('analytics');
+    const config = getConfigValue('analytics');
 
-    if (analyticsConfig && getConsent('commerce-collection')) {
+    if (config && getConsent('commerce-collection')) {
+      const csHeaders = getConfigValue('headers.cs');
+
       window.adobeDataLayer.push(
         {
           storefrontInstanceContext: {
-            baseCurrencyCode: analyticsConfig['base-currency-code'],
-            environment: analyticsConfig.environment,
-            environmentId: analyticsConfig['environment-id'],
-            storeCode: analyticsConfig['store-code'],
+            baseCurrencyCode: config['base-currency-code'],
+            environment: config.environment,
+            environmentId: csHeaders['Magento-Environment-Id'],
+            storeCode: csHeaders['Magento-Store-Code'],
             storefrontTemplate: 'EDS',
-            storeId: parseInt(analyticsConfig['store-id'], 10),
-            storeName: analyticsConfig['store-name'],
-            storeUrl: analyticsConfig['store-url'],
-            storeViewCode: analyticsConfig['store-view-code'],
-            storeViewCurrencyCode: analyticsConfig['base-currency-code'],
-            storeViewId: parseInt(analyticsConfig['store-view-id'], 10),
-            storeViewName: analyticsConfig['store-view-name'],
-            websiteCode: analyticsConfig['website-code'],
-            websiteId: parseInt(analyticsConfig['website-id'], 10),
-            websiteName: analyticsConfig['website-name'],
+            storeId: parseInt(config['store-id'], 10),
+            storeName: config['store-name'],
+            storeUrl: config['store-url'],
+            storeViewCode: csHeaders['Magento-Store-View-Code'],
+            storeViewCurrencyCode: config['base-currency-code'],
+            storeViewId: parseInt(config['store-view-id'], 10),
+            storeViewName: config['store-view-name'],
+            websiteCode: csHeaders['Magento-Website-Code'],
+            websiteId: parseInt(config['website-id'], 10),
+            websiteName: config['website-name'],
           },
         },
         { eventForwardingContext: { commerce: true, aep: false } },

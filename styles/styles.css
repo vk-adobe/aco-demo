@@ -1,3 +1,5 @@
+/* stylelint-disable selector-class-pattern, no-descending-specificity */
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -138,7 +140,7 @@
 }
 
 html, body {
-  min-height: 100%;
+  height: 100%;
 }
 
 html {
@@ -279,7 +281,7 @@ a:not(.dropin-design a) {
   font: var(--type-body-1-strong-font);
   letter-spacing: var(--type-body-1-strong-letter-spacing);
   text-decoration: none;
-  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 a:not(.dropin-design a):hover {
@@ -396,7 +398,7 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   main > .section > div {
     padding: 0 var(--spacing-big);
   }
@@ -452,13 +454,13 @@ body.columns main > .section:empty {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   body.columns main {
     padding: var(--spacing-large) var(--spacing-big);
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   body.columns main {
     flex-direction: row;
   }

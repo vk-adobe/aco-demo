@@ -1,7 +1,7 @@
+/* eslint-disable import/extensions */
 const fs = require('fs');
 const path = require('path');
-
-const { dependencies } = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+const { dependencies } = require('./package.json');
 
 // Define the dropins folder
 const dropinsDir = path.join('scripts', '__dropins__');

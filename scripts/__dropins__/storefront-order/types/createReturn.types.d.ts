@@ -16,7 +16,6 @@ type onSuccessTypes = {
 export interface CreateReturnProps {
     orderData?: OrderDataModel;
     slots?: {
-        Footer: SlotProps;
         ReturnOrderItem: SlotProps;
         ReturnFormActions: SlotProps<{
             handleChangeStep: (value: StepsTypes) => void;
@@ -39,7 +38,6 @@ export interface CreateReturnProps {
 export interface ReturnOrderProductListProps {
     placeholderImage: string;
     slots?: {
-        Footer: SlotProps;
         ReturnOrderItem: SlotProps;
         CartSummaryItemImage?: SlotProps<{
             data: OrderItemModel;

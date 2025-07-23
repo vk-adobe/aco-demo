@@ -21,6 +21,4 @@ export * from './vcomponent';
 export * from './image-params-keymap';
 export * from './is-number';
 export * from './deviceUtils';
-export * from './get-path-value';
-export * from './get-cookie';
 //# sourceMappingURL=index.d.ts.map
